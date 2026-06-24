@@ -50,15 +50,7 @@ def format_number(value):
 # Sidebar
 # -----------------------------
 st.sidebar.title("Saudi Tourism EDA")
-st.sidebar.write("Upload the dataset or place `tourism_data.csv` in the same folder as this app.")
-
-uploaded_file = st.sidebar.file_uploader("Upload tourism_data.csv", type=["csv"])
-
-try:
-    raw_df = load_data(uploaded_file)
-except FileNotFoundError:
-    st.error("Please upload the dataset CSV file or place tourism_data.csv in the same folder as this app.")
-    st.stop()
+st.caption("Prepared by Yahya Majrashi")
 
 original_shape = raw_df.shape
 duplicate_count = raw_df.duplicated().sum()
@@ -325,3 +317,7 @@ st.write(
     "Makkah, Riyadh, and the Eastern Region are the main tourism centers. "
     "The analysis also shows that inbound tourists spend more overall, while domestic tourists represent the largest visitor volume."
 )
+st.markdown("---")
+st.markdown("### Author")
+st.write("Yahya Majrashi")
+st.write("Tuwaiq Academy – Data Science & AI Diploma")
