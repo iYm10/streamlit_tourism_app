@@ -315,7 +315,3 @@ st.write(
     "Makkah, Riyadh, and the Eastern Region are the main tourism centers. "
     "The analysis also shows that inbound tourists spend more overall, while domestic tourists represent the largest visitor volume."
 )
-st.markdown("---")
-st.markdown("### Author")
-st.write("Yahya Majrashi")
-st.write("Tuwaiq Academy – Data Science & AI Diploma")
