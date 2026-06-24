@@ -13,11 +13,8 @@ st.set_page_config(
 # Helper functions
 # -----------------------------
 @st.cache_data
-def load_data(uploaded_file=None):
-    if uploaded_file is not None:
-        df = pd.read_csv(uploaded_file)
-    else:
-        df = pd.read_csv("tourism_data.csv")
+def load_data():
+    df = pd.read_csv("tourism_data.csv")
     return df
 
 
@@ -51,6 +48,7 @@ def format_number(value):
 # -----------------------------
 st.sidebar.title("Saudi Tourism EDA")
 st.caption("Prepared by Yahya Majrashi")
+raw_df = load_data()
 
 original_shape = raw_df.shape
 duplicate_count = raw_df.duplicated().sum()
